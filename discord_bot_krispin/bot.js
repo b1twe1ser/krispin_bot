@@ -17,7 +17,7 @@ function gotMessage(msg) {
     msg.reply("🦀");
   } else if (msg.content === "&k_h") {
     msg.reply(
-      "*Hello there 👋🏻*, my current commands are &k_h for krispin help and &k_m for krispin math. If you wish to get a quick math expression evaluated, you could type something like &k_m: (pi)^2"
+      "*Hello there 👋🏻*, my current commands are &k_h for krispin help and &k or 🦀🧮 for krispin math. If you wish to get a quick math expression evaluated, you could type something like &k_m: (pi)^2"
     );
   }
 }
@@ -26,7 +26,7 @@ function message_parse_math(message) {
   let calc_emojis = ["🧮", "🧠", "💭", "💬"];
   let answer_emojis = ["👍", "🍻", "🥂", "🎉", "🍾", "🥳"];
   let message_content = message.content;
-  if (message_content.includes("&k_m")) {
+  if (message_content.includes("&k_m") || message_content.includes("&🦀🧮")) {
     for (let i = 0; i < message_content.length; i++) {
       if (message_content[i] == ":") {
         let equation = message_content.slice(i + 2, message_content.length);
